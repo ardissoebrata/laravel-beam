@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'Asia/Jakarta',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -79,7 +79,7 @@ return array(
 	*/
 
 	'providers' => array(
-
+		// Laravel
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
@@ -107,6 +107,12 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		// Additional Providers
+		
+		// Development Providers
+//        'Way\Generators\GeneratorsServiceProvider', // Generators
+//        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider', // IDE Helpers
+		
 	),
 
 	/*
@@ -172,6 +178,9 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		
+		// Additional Aliases
+        'Carbon'          => 'Carbon\Carbon', // Carbon
 
 	),
 

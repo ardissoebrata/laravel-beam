@@ -1,7 +1,23 @@
+# Laravel
 /bootstrap/compiled.php
 /vendor
+
+# Composer
 composer.phar
 composer.lock
+
+# OS
 .DS_Store
 Thumbs.db
+.idea/
+
+# IDE
 /nbproject/private/
+
+# Configuration
+/app/config/local
+/app/config/staging
+/app/config/production
+
+# Packages
+_ide_helper.php

@@ -1,10 +1,20 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
+	"name": "ardissoebrata/laravel-beam",
+	"description": "Laravel 4 Starter Kit.",
+	"keywords": ["laravel", "starter"],
 	"license": "MIT",
+	"authors": [
+		{
+			"name": "Ardi Soebrata"
+		}
+	],
 	"require": {
 		"laravel/framework": "4.1.*"
+	},
+	"require-dev": {
+		"way/generators": "dev-master",
+        "mockery/mockery": "dev-master@dev",
+		"barryvdh/laravel-ide-helper": "1.*"
 	},
 	"autoload": {
 		"classmap": [
@@ -17,11 +27,14 @@
 		]
 	},
 	"scripts": {
+		"pre-update-cmd": [
+			"php artisan clear-compiled"
+		],
 		"post-install-cmd": [
 			"php artisan optimize"
 		],
 		"post-update-cmd": [
-			"php artisan clear-compiled",
+			"php artisan ide-helper:generate",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
