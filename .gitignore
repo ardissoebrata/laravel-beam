@@ -1,6 +1,7 @@
 # Laravel
 /bootstrap/compiled.php
 /vendor
+/node_modules
 
 # Composer
 composer.phar

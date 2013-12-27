@@ -1,0 +1,28 @@
+{
+	"name": "laravel-beam",
+	"version": "0.1.0",
+	"description": "Laravel 4 Starter Kit",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ardissoebrata/laravel-beam"
+	},
+	"keywords": [
+		"laravel4",
+		"starter"
+	],
+	"author": "Ardi Soebrata",
+	"license": "MIT",
+	"devDependencies": {
+		"btoa": "~1.1.1",
+		"grunt": "~0.4.2",
+		"grunt-banner": "~0.2.0",
+		"grunt-contrib-clean": "~0.5.0",
+		"grunt-contrib-concat": "~0.3.0",
+		"grunt-contrib-connect": "~0.5.0",
+		"grunt-contrib-copy": "~0.5.0",
+		"grunt-contrib-less": "~0.8.3",
+		"grunt-contrib-uglify": "~0.2.7",
+		"grunt-csscomb": "~1.2.1",
+		"load-grunt-tasks": "~0.2.1"
+	}
+}

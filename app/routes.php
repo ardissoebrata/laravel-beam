@@ -15,3 +15,8 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('bootstrap/css', function() 
+{
+	return View::make('bootstrap/css');
+});
