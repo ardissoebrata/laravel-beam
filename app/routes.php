@@ -13,10 +13,10 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('demos/hello');
 });
 
-Route::get('bootstrap/css', function() 
+Route::get('demos/bootstrap', function() 
 {
-	return View::make('bootstrap/css');
+	return View::make('demos/bootstrap');
 });

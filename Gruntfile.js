@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 			options: {
 				force: true
 			},
-			dist: ['<%= bootstrapDir %>dist']
+			dist: ['<%= bootstrapDir %>dist/css', '<%= bootstrapDir %>dist/js']
 		},
 		concat: {
 			options: {
@@ -129,7 +129,7 @@ module.exports = function(grunt) {
 
 	// CSS distribution task.
 	grunt.registerTask('dist-css', ['less', 'csscomb', 'usebanner']);
-
+	
 	// Full distribution task.
 	grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js']);
 
