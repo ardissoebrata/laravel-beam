@@ -127,20 +127,25 @@
 				<button type="button" class="btn btn-default">6</button>
 				<button type="button" class="btn btn-default">7</button>
 			</div>
-			<div class="btn-group">
-				<button type="button" class="btn btn-default">8</button>
+		</div>
+	</div>
+	
+	<div class="bs-example" style="margin-bottom: 15px;">
+		<div class="btn-group">
+			<button type="button" class="btn btn-default">1</button>
+			<button type="button" class="btn btn-default">2</button>
+			<button type="button" class="btn btn-default">3</button>
 
-				<div class="btn-group">
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-						Dropdown
-						<span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu">
-						<li><a href="#">Dropdown link</a></li>
-						<li><a href="#">Dropdown link</a></li>
-						<li><a href="#">Dropdown link</a></li>
-					</ul>
-				</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					Dropdown
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Dropdown link</a></li>
+					<li><a href="#">Dropdown link</a></li>
+					<li><a href="#">Dropdown link</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -149,9 +154,49 @@
 		<div class="btn-group-vertical">
 			<button type="button" class="btn btn-default">Button</button>
 			<button type="button" class="btn btn-default">Button</button>
+			<div class="btn-group">
+				<button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					Dropdown
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
+					<li><a href="#">Dropdown link</a></li>
+					<li><a href="#">Dropdown link</a></li>
+				</ul>
+			</div>
 			<button type="button" class="btn btn-default">Button</button>
 			<button type="button" class="btn btn-default">Button</button>
+			<div class="btn-group">
+				<button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					Dropdown
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop2">
+					<li><a href="#">Dropdown link</a></li>
+					<li><a href="#">Dropdown link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button id="btnGroupVerticalDrop3" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					Dropdown
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop3">
+					<li><a href="#">Dropdown link</a></li>
+					<li><a href="#">Dropdown link</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button id="btnGroupVerticalDrop4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					Dropdown
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop4">
+					<li><a href="#">Dropdown link</a></li>
+					<li><a href="#">Dropdown link</a></li>
+				</ul>
+			</div>
 		</div>
-	</div>
+    </div>
 
 </div>

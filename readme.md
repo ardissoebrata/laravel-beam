@@ -6,7 +6,7 @@ Laravel Beam is a starter kit for development in Laravel 4 framework.
 
 `[ ]` Incorporate HTML5 Boilerplate
 `[x]` Include source map in Twitter Bootstrap
-`[ ]` Add FontAwesome
+`[x]` Add FontAwesome
 `[ ]` Add Carbon
 `[ ]` Add Former
 `[ ]` Add JQuery Upload

@@ -16,7 +16,4 @@ Route::get('/', function()
 	return View::make('demos/hello');
 });
 
-Route::get('demos/bootstrap', function() 
-{
-	return View::make('demos/bootstrap');
-});
+Route::controller('demos', 'DemosController');

@@ -10,7 +10,8 @@
 		}
 	],
 	"require": {
-		"laravel/framework": "4.1.*"
+		"laravel/framework": "4.1.*",
+		"symfony/yaml": "2.5.*@dev"
 	},
 	"require-dev": {
 		"way/generators": "dev-master",

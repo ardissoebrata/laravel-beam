@@ -25,6 +25,7 @@
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
 		<link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.css" media="screen">
+		<link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css" media="screen">
 		<style>
 		body {
 			position: relative;
@@ -58,6 +59,7 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li{{ (Request::is('demos/bootstrap*') ? ' class="active"' : '') }}><a href="{{{ URL::to('demos/bootstrap') }}}">Bootstrap</a></li>
+								<li{{ (Request::is('demos/font-awesome*') ? ' class="active"' : '') }}><a href="{{{ URL::to('demos/font-awesome') }}}">Font Awesome</a></li>
 							</ul>
 						</li>
 					</ul>
