@@ -108,6 +108,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
 		// Additional Providers
+		'Zizaco\Confide\ConfideServiceProvider', // Authentication
+		'Former\FormerServiceProvider', // Form helper
 		
 		// Development Providers
 //        'Way\Generators\GeneratorsServiceProvider', // Generators
@@ -181,7 +183,8 @@ return array(
 		
 		// Additional Aliases
         'Carbon'          => 'Carbon\Carbon', // Carbon
-
+		'Confide'         => 'Zizaco\Confide\ConfideFacade', // Confide
+		'Former'          => 'Former\Facades\Former', // Former
 	),
 
 );
