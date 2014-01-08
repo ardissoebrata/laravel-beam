@@ -30,6 +30,7 @@ class UserController extends BaseController
 	{
 		$user = new User;
 
+		$user->name = Input::get('name');
 		$user->username = Input::get('username');
 		$user->email = Input::get('email');
 		$user->password = Input::get('password');
@@ -46,7 +47,7 @@ class UserController extends BaseController
 		{
 			// Redirect with success message, You may replace "Lang::get(..." for your custom message.
 			return Redirect::to('user/login')
-							->with('notice', Lang::get('confide::confide.alerts.account_created'));
+							->with('notice', Lang::get('confide.alerts.account_created'));
 		}
 		else
 		{
@@ -109,15 +110,15 @@ class UserController extends BaseController
 			// Check if there was too many login attempts
 			if (Confide::isThrottled($input))
 			{
-				$err_msg = Lang::get('confide::confide.alerts.too_many_attempts');
+				$err_msg = Lang::get('confide.alerts.too_many_attempts');
 			}
 			elseif ($user->checkUserExists($input) and !$user->isConfirmed($input))
 			{
-				$err_msg = Lang::get('confide::confide.alerts.not_confirmed');
+				$err_msg = Lang::get('confide.alerts.not_confirmed');
 			}
 			else
 			{
-				$err_msg = Lang::get('confide::confide.alerts.wrong_credentials');
+				$err_msg = Lang::get('confide.alerts.wrong_credentials');
 			}
 
 			return Redirect::to('user/login')
@@ -135,13 +136,13 @@ class UserController extends BaseController
 	{
 		if (Confide::confirm($code))
 		{
-			$notice_msg = Lang::get('confide::confide.alerts.confirmation');
+			$notice_msg = Lang::get('confide.alerts.confirmation');
 			return Redirect::to('user/login')
 							->with('notice', $notice_msg);
 		}
 		else
 		{
-			$error_msg = Lang::get('confide::confide.alerts.wrong_confirmation');
+			$error_msg = Lang::get('confide.alerts.wrong_confirmation');
 			return Redirect::to('user/login')
 							->with('error', $error_msg);
 		}
@@ -164,13 +165,13 @@ class UserController extends BaseController
 	{
 		if (Confide::forgotPassword(Input::get('email')))
 		{
-			$notice_msg = Lang::get('confide::confide.alerts.password_forgot');
+			$notice_msg = Lang::get('confide.alerts.password_forgot');
 			return Redirect::to('user/login')
 							->with('notice', $notice_msg);
 		}
 		else
 		{
-			$error_msg = Lang::get('confide::confide.alerts.wrong_password_forgot');
+			$error_msg = Lang::get('confide.alerts.wrong_password_forgot');
 			return Redirect::to('user/forgot')
 							->withInput()
 							->with('error', $error_msg);
@@ -202,13 +203,13 @@ class UserController extends BaseController
 		// By passing an array with the token, password and confirmation
 		if (Confide::resetPassword($input))
 		{
-			$notice_msg = Lang::get('confide::confide.alerts.password_reset');
+			$notice_msg = Lang::get('confide.alerts.password_reset');
 			return Redirect::to('user/login')
 							->with('notice', $notice_msg);
 		}
 		else
 		{
-			$error_msg = Lang::get('confide::confide.alerts.wrong_password_reset');
+			$error_msg = Lang::get('confide.alerts.wrong_password_reset');
 			return Redirect::to('user/reset/' . $input['token'])
 							->withInput()
 							->with('error', $error_msg);
@@ -226,4 +227,42 @@ class UserController extends BaseController
 		return Redirect::to('/');
 	}
 
+	public function getIndex()
+	{
+		$users = User::all();
+		return View::make('user/index', compact('users'));
+	}
+	
+	public function getEdit($id)
+	{
+		$user = User::findOrFail($id);
+		return View::make('user/edit', compact('user'));
+	}
+	
+	public function postEdit($id)
+	{
+		$user = User::findOrFail($id);
+		$user->name = Input::get('name');
+		$user->username = Input::get('username');
+		$user->email = Input::get('email');
+		
+		$password = Input::get('password');
+		if (!empty($password)) {
+			$user->password = $password;
+			$user->password_confirmation = Input::get('password_confirmation');
+		}
+		
+		if ($user->updateUniques($user->getUpdateRules()))
+		{
+			// Redirect with success message, You may replace "Lang::get(..." for your custom message.
+			return Redirect::to('user/index')
+							->with('notice', Lang::get('confide.alerts.account_updated'));
+		}
+		else
+		{
+			return Redirect::action('UserController@getEdit', $id)
+							->withInput(Input::except('password'))
+							->withErrors($user->errors());
+		}
+	}
 }

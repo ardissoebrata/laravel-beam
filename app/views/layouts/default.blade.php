@@ -62,14 +62,29 @@
 								<li{{ (Request::is('demos/font-awesome*') ? ' class="active"' : '') }}><a href="{{{ URL::to('demos/font-awesome') }}}">Font Awesome</a></li>
 							</ul>
 						</li>
+						<li class="dropdown{{ (Request::is('user/*') ? ' active' : '') }}">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="{{{ URL::to('user/index') }}}">
+								Users <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li{{ (Request::is('user/index*') ? ' class="active"' : '') }}><a href="{{{ URL::to('user/index') }}}">Users</a></li>
+							</ul>
+						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						@if (Auth::guest())
 						<li{{ (Request::is('user/getLogin*') ? ' class="active"' : '') }}><a href="{{{ URL::action('UserController@getLogin') }}}">Login</a></li>
 						<li{{ (Request::is('user/getCreate*') ? ' class="active"' : '') }}><a href="{{{ URL::action('UserController@getCreate') }}}">Sign Up</a></li>
 						@else
-						<li class="navbar-text">{{ Auth::user()->username }}</li>
-						<li{{ (Request::is('user/getLogout*') ? ' class="active"' : '') }}><a href="{{{ URL::action('UserController@getLogout') }}}">Logout</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								{{ Auth::user()->name }} <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="{{{ URL::to('user/edit/' . Auth::user()->id) }}}">Profile</a></li>
+								<li><a href="{{{ URL::action('UserController@getLogout') }}}">Logout</a></li>
+							</ul>
+						</li>
 						@endif
 					</ul>
 				</div>
