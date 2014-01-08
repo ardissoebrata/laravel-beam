@@ -65,11 +65,11 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						@if (Auth::guest())
-						<li{{ (Request::is('user/login*') ? ' class="active"' : '') }}><a href="{{{ URL::action('UserController@login') }}}">Login</a></li>
-						<li{{ (Request::is('user/create*') ? ' class="active"' : '') }}><a href="{{{ URL::action('UserController@create') }}}">Sign Up</a></li>
+						<li{{ (Request::is('user/getLogin*') ? ' class="active"' : '') }}><a href="{{{ URL::action('UserController@getLogin') }}}">Login</a></li>
+						<li{{ (Request::is('user/getCreate*') ? ' class="active"' : '') }}><a href="{{{ URL::action('UserController@getCreate') }}}">Sign Up</a></li>
 						@else
 						<li class="navbar-text">{{ Auth::user()->username }}</li>
-						<li{{ (Request::is('user/logout*') ? ' class="active"' : '') }}><a href="{{{ URL::action('UserController@logout') }}}">Logout</a></li>
+						<li{{ (Request::is('user/getLogout*') ? ' class="active"' : '') }}><a href="{{{ URL::action('UserController@getLogout') }}}">Logout</a></li>
 						@endif
 					</ul>
 				</div>

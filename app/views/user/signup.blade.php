@@ -9,7 +9,7 @@
 			</div>
 			{{ Former::horizontal_open()
 						->method('POST')
-						->action((Confide::checkAction('UserController@store')) ?: URL::to('user'))
+						->action((Confide::checkAction('UserController@store')) ?: URL::to('/user/create'))
 						->accept_charset('UTF-8')
 						->role('form') }}
 			{{ Former::text('username')
