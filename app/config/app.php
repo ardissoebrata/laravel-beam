@@ -201,7 +201,7 @@ return array(
 		'Image'          => 'Bootstrapper\Image',
 		'Label'          => 'Bootstrapper\Label',
 		'MediaObject'    => 'Bootstrapper\MediaObject',
-		'Modal'          => 'Bootstrapper\Modal',
+		'Modal'          => 'Beam\Bootstrapper\Modal',
 		'Navbar'         => 'Bootstrapper\Navbar',
 		'Navigation'     => 'Bootstrapper\Navigation',
 		'Paginator'      => 'Bootstrapper\Paginator',
