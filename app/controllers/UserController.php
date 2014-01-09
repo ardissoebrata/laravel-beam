@@ -265,4 +265,13 @@ class UserController extends BaseController
 							->withErrors($user->errors());
 		}
 	}
+	
+	public function postDelete($id)
+	{
+		$user = User::findOrFail($id);
+		$deleted_user = $user->email;
+		$user->delete();
+		return Redirect::action('UserController@getIndex')
+				->with('success', Lang::get('confide.alerts.account_deleted', array('name' => $deleted_user)));
+	}
 }

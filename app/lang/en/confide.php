@@ -39,6 +39,11 @@ return array(
 	'reset' => array(
 		'title' => 'Reset password',
 	),
+	
+	'delete_confirmation' => array(
+		'title' => 'Delete Confirmation',
+		'content' => 'Are you sure you want to delete this User?'
+	),
 
     'alerts' => array(
         'account_created' => 'Your account has been successfully created. Please check your email for the instructions on how to confirm your account.',
@@ -54,6 +59,7 @@ return array(
         'wrong_token' => 'The password reset token is not valid.',
         'duplicated_credentials' => 'The credentials provided have already been used. Try with different credentials.',
 		'account_updated' => 'User account has been successfully updated.',
+		'account_deleted' => 'User account :name has been deleted.',
     ),
 
     'email' => array(

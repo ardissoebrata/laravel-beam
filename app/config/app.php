@@ -110,6 +110,7 @@ return array(
 		// Additional Providers
 		'Zizaco\Confide\ConfideServiceProvider', // Authentication
 		'Former\FormerServiceProvider', // Form helper
+		'Bootstrapper\BootstrapperServiceProvider', // Twitter Bootstrap helper
 		
 		// Development Providers
 //        'Way\Generators\GeneratorsServiceProvider', // Generators
@@ -185,6 +186,31 @@ return array(
         'Carbon'          => 'Carbon\Carbon', // Carbon
 		'Confide'         => 'Zizaco\Confide\ConfideFacade', // Confide
 		'Former'          => 'Former\Facades\Former', // Former
+		
+		'Alert'          => 'Bootstrapper\Alert',
+		'Badge'          => 'Bootstrapper\Badge',
+		'Breadcrumb'     => 'Bootstrapper\Breadcrumb',
+		'Button'         => 'Bootstrapper\Button',
+		'ButtonGroup'    => 'Bootstrapper\ButtonGroup',
+		'ButtonToolbar'  => 'Bootstrapper\ButtonToolbar',
+		'Carousel'       => 'Bootstrapper\Carousel',
+		'DropdownButton' => 'Bootstrapper\DropdownButton',
+		'Form'           => 'Bootstrapper\Form',
+		'Helpers'        => 'Bootstrapper\Helpers',
+		'Icon'           => 'Bootstrapper\Icon',
+		'Image'          => 'Bootstrapper\Image',
+		'Label'          => 'Bootstrapper\Label',
+		'MediaObject'    => 'Bootstrapper\MediaObject',
+		'Modal'          => 'Bootstrapper\Modal',
+		'Navbar'         => 'Bootstrapper\Navbar',
+		'Navigation'     => 'Bootstrapper\Navigation',
+		'Paginator'      => 'Bootstrapper\Paginator',
+		'Progress'       => 'Bootstrapper\Progress',
+		'Tabbable'       => 'Bootstrapper\Tabbable',
+		'Table'          => 'Bootstrapper\Table',
+		'Thumbnail'      => 'Bootstrapper\Thumbnail',
+		'Typeahead'      => 'Bootstrapper\Typeahead',
+		'Typography'     => 'Bootstrapper\Typography',
 	),
 
 );
