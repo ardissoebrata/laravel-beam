@@ -35,4 +35,9 @@ class Role extends \LaravelBook\Ardent\Ardent {
 		return $query->orderByName()
 				->where('parent_id', null);
 	}
+	
+	public function users()
+	{
+		return $this->hasMany('User');
+	}
 }

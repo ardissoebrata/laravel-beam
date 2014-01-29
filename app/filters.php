@@ -37,6 +37,13 @@ Route::filter('auth', function()
 {
 	if (Auth::guest()) return Redirect::action('UserController@getLogin');
 	Acl::build();
+	$resource_name = Route::getCurrentRoute()->getActionName();
+	if ($resource_name == 'Closure')
+		$resource_name = Route::getCurrentRoute()->getUri();
+	if (!Acl::isAllowed(Auth::user()->role->name, $resource_name))
+	{
+		App::abort(403);
+	}
 });
 
 

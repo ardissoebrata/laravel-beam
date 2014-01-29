@@ -155,7 +155,7 @@ class Acl {
 				$resource = new \Resource();
 				$resource->name = $route_name;
 				$resource->type = $type;
-				$resource->save();
+				$resource->updateUniques();
 			}
 		}
 	}

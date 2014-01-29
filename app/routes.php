@@ -25,7 +25,7 @@ Route::group(array('before' => 'auth'), function() {
 	
 	Route::get('user/index', 'UserController@getIndex');
 	Route::get('user/edit/{id}', 'UserController@getEdit');
-	Route::post('user/edit', 'UserController@postEdit');
+	Route::post('user/edit/{id}', 'UserController@postEdit');
 	Route::post('user/delete/{id}', 'UserController@postDelete');
 	
 });
@@ -38,4 +38,3 @@ Route::post('user/login', 'UserController@postLogin');
 Route::get('user/logout', 'UserController@getLogout');
 Route::get('user/create', 'UserController@getCreate');
 Route::post('user/create', 'UserController@postCreate');
-

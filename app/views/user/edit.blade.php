@@ -22,6 +22,10 @@
 			{{ Former::text('email', 'confide.e_mail')
 						->placeholder('confide.e_mail') 
 			}}
+			{{ Former::select('role_id', 'acl.role.title')
+						->fromQuery(Role::all(), 'name')
+						->placeholder('Select a Role ...')
+						->addClass('selectpicker') }}
 			{{ Former::password('password', 'confide.password')
 						->placeholder('confide.password') 
 			}}

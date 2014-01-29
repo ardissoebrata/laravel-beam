@@ -34,6 +34,7 @@ class UserController extends BaseController
 		$user->username = Input::get('username');
 		$user->email = Input::get('email');
 		$user->password = Input::get('password');
+		$user->role_id = 3;									// Set default role (Account)
 
 		// The password confirmation will be removed from model
 		// before saving. This field will be used in Ardent's
@@ -245,6 +246,7 @@ class UserController extends BaseController
 		$user->name = Input::get('name');
 		$user->username = Input::get('username');
 		$user->email = Input::get('email');
+		$user->role_id = Input::get('role_id');
 		
 		$password = Input::get('password');
 		if (!empty($password)) {

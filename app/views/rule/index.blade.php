@@ -89,7 +89,11 @@
 			{{ displayResources($curr_role, $resources) }}
 			</tbody>
 		</table>
-		{{ Former::primary_button('acl.save')->addClass('btn-block')->icon('save') }}
+		<p>
+			<button class="btn btn-block btn-primary" type="submit">
+				<span class="fa fa-save"></span> {{ Lang::get('acl.save') }}
+			</button>
+		</p>
 		{{ Former::close() }}
 		@endif
 	</div>
