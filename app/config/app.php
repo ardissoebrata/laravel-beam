@@ -184,6 +184,7 @@ return array(
 		
 		// Additional Aliases
         'Carbon'          => 'Carbon\Carbon', // Carbon
+		'Acl'			  => 'Beam\Acl\Acl', // Acl
 		'Confide'         => 'Zizaco\Confide\ConfideFacade', // Confide
 		'Former'          => 'Former\Facades\Former', // Former
 		
@@ -197,7 +198,7 @@ return array(
 		'DropdownButton' => 'Bootstrapper\DropdownButton',
 		'Form'           => 'Bootstrapper\Form',
 		'Helpers'        => 'Bootstrapper\Helpers',
-		'Icon'           => 'Bootstrapper\Icon',
+		'Icon'           => 'Beam\Bootstrapper\Icon',
 		'Image'          => 'Bootstrapper\Image',
 		'Label'          => 'Bootstrapper\Label',
 		'MediaObject'    => 'Bootstrapper\MediaObject',

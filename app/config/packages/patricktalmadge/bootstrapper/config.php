@@ -15,6 +15,6 @@
   ),
 
     // The prefix you want to use for your icons. The closing dash is required
-  'icon_prefix' => "glyphicon-",
+  'icon_prefix' => "fa-",
     
 );

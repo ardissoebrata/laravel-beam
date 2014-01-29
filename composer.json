@@ -14,7 +14,8 @@
 		"symfony/yaml": "2.5.*@dev",
 		"zizaco/confide": "3.1.x",
 		"anahkiasen/former": "dev-master",
-		"patricktalmadge/bootstrapper": "dev-develop"
+		"patricktalmadge/bootstrapper": "dev-develop",
+		"zendframework/zend-permissions-acl": "2.2.*@dev"
 	},
 	"require-dev": {
 		"way/generators": "dev-master",

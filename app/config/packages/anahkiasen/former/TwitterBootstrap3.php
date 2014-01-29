@@ -20,8 +20,8 @@
 	// HTML markup and classes used by Bootstrap 3 for icons
 	'icon' => array(
 		'tag'    => 'span',
-		'set'    => 'glyphicon',
-		'prefix' => 'glyphicon',
+		'set'    => 'fa',
+		'prefix' => 'fa',
 	),
 
 );

@@ -26,6 +26,7 @@
 
 		<link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.css" media="screen">
 		<link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css" media="screen">
+		<link rel="stylesheet" href="/assets/bootstrap-select/bootstrap-select.css" media="screen">
 		<style>
 		body {
 			position: relative;
@@ -68,6 +69,9 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li{{ (Request::is('user/index*') ? ' class="active"' : '') }}><a href="{{{ URL::to('user/index') }}}">Users</a></li>
+								<li{{ (Request::is('rule*') ? ' class="active"' : '') }}><a href="{{{ URL::to('rule/index') }}}">Rule</a></li>
+								<li{{ (Request::is('resource*') ? ' class="active"' : '') }}><a href="{{{ URL::to('resource/index') }}}">Resource</a></li>
+								<li{{ (Request::is('role*') ? ' class="active"' : '') }}><a href="{{{ URL::to('role/index') }}}">Role</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -111,6 +115,8 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>');</script>
 		<script src="/assets/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="/assets/bootstrap-select/bootstrap-select.min.js"></script>
+		<script src="/js/main.js"></script>
 		@yield('scripts')
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
